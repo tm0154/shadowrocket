@@ -1,0 +1,2 @@
+# shadowrocket
+ssr 
