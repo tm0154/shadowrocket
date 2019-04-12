@@ -163,3 +163,52 @@ tls1.2_ticket_fastauth_compatible
 https://github.com/shadowsocksr-backup/shadowsocksr
 
 标签: shadowsocks
+
+
+# 系统用的是Centos6.x 64  安装
+
+进入系统执行如下命令
+
+PowerShell
+wget -N --no-check-certificate https://y.zhulou.net/ssr.sh && chmod +x ssr.sh && bash ssr.sh
+如果上述地址不可用可以使用下面的备用地址
+
+PowerShell
+wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssr.sh && chmod +x ssr.sh && bash ssr.sh
+如果系统无法执行命令，可能是因为系统过于精简。需要执行如下命令
+
+PowerShell
+yum install -y wget
+下载运行后会提示你输入数字来选择要做什么。
+
+输入 1 ，就会开始安装ShadowsocksR服务端，并且会提示你输入Shadowsocks的 端口/密码/加密方式/ 协议/混淆（混淆和协议是通过输入数字选择的） 等参数。
+
+
+
+如果需要进入服务界面输入如下命令
+
+Markup
+bash ssr.sh
+
+相关命令
+
+ShadowsocksR 安装后，自动设置为 系统服务，所以支持使用服务来启动/停止等操作，同时支持开机启动。
+
+
+
+启动 ShadowsocksR：service ssr start
+
+停止 ShadowsocksR：service ssr stop
+
+重启 ShadowsocksR：service ssr restart
+
+查看 ShadowsocksR状态：service ssr status
+
+ShadowsocksR 默认支持UDP转发，服务端无需任何设置。
+
+
+
+本脚本已经集成了 安装/卸载 锐速(ServerSpeeder)开心版，但是是否支持请查看 Linux支持内核列表 。（锐速不支持OpenVZ）
+## 参考链接:https://www.zhulou.net/post/157.html
+
+
